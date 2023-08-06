@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Num</title>
+
+    <style>
+        form{
+            margin: 0 auto;
+            width: 30%;
+            margin-top: 30px;
+        }
+        input{
+            width: 80%;
+            height: 20px;
+            margin: 7px;
+            padding: 5px;
+        }
+        .submit{
+            width: 80%;
+            margin-left:10px;
+            height: 40px;
+            background: navy;
+            border-radius: 5px;
+        }
+        h1{
+        
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <form action="/submit" method="post">
+        <input type="text" placeholder="first name" name="Fname"><br>
+        <input type="text" placeholder="last name" name="Lname"><br>
+        <input class="submit" type="submit" value="submit">
+    </form>
+    
+    <% if (locals.letterNum){ %>
+
+        <h1>there are <%= letterNum %> letters in your name congratulation!!</h1>
+    <%}else{ %>
+        <h1>Enter your name above</h1>
+    <%}%>
+   
+</body>
+</html>
